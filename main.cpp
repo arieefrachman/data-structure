@@ -9,31 +9,27 @@ struct Rectangle {
     char x;
 };
 
-int main() {
-    return 0;
+void reference(){
+    int a = 10;
+    int &ref = a;
+
+    int b = 30;
+
+    ref = b;
+    cout<<ref<<endl<<a<<endl;
 }
 
-void arr(){
-    int n;
-    cout<<"Input a size:";
-    cin>>n;
+void ptrToStruct(){
 
-    int A[n];
-
-}
-
-void structure(){
-    struct Rectangle r1 = {10, 5};
-    printf("%lu", sizeof(r1));
 }
 
 void pointer(){
     int a = 10;
     int *p;
 
-    p = &a;
-
-    //printf("using pointer: %d\n", *p);
+    printf("using pointer: %d\n", *p);
+    a++;
+    printf("using pointer: %d\n", *p);
 
     int Arr[2] = {1,2};
     int *ptr;
@@ -63,9 +59,28 @@ void pointer(){
     double *p4;
     struct Rectangle *p5;
 
-    cout<<sizeof(p1)<<endl;
+    /*cout<<sizeof(p1)<<endl;
     cout<<sizeof(p2)<<endl;
     cout<<sizeof(p3)<<endl;
-    cout<<sizeof(p4)<<endl;
+    cout<<sizeof(p4)<<endl;*/
 
+}
+
+int main() {
+    ptrToStruct();
+    return 0;
+}
+
+void arr(){
+    int n;
+    cout<<"Input a size:";
+    cin>>n;
+
+    int A[n];
+
+}
+
+void structure(){
+    struct Rectangle r1 = {10, 5};
+    printf("%lu", sizeof(r1));
 }

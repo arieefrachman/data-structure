@@ -3,10 +3,17 @@ using namespace std;
 
 struct Rectangle {
     int length;
-    int breath;
+    int breadth;
+    char x;
 };
 
 int main() {
+    int a = 10;
+    int *p;
+
+    p = &a;
+
+    cout<<p;
 
     return 0;
 }
@@ -20,7 +27,7 @@ void arr(){
 
 }
 
-void structure(){
-    struct Rectangle w{};
-
+static void structure(){
+    struct Rectangle r1 = {10, 5};
+    printf("%lu", sizeof(r1));
 }

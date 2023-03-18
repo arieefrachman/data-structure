@@ -20,6 +20,35 @@ void reference(){
 }
 
 void ptrToStruct(){
+    struct Rectangle r = {10, 5};
+
+    // assign type pointer
+    Rectangle *ptr = &r;
+
+    // set property using "->"
+    //ptr->length = 30;
+    //ptr->breadth = 10;
+
+    cout<<r.length<<endl;
+    cout<<r.breadth<<endl;
+
+    cout<<ptr -> length<<endl;
+    cout<<ptr -> breadth<<endl;
+
+
+    // create object from struct and store it into the heap using C style
+    Rectangle *p1;
+    p1 = (Rectangle *)malloc(sizeof (struct Rectangle));
+
+    p1 -> length = 10;
+    p1 -> breadth = 40;
+
+    // create object from struct and store it into heap using C++ style
+    Rectangle *p2;
+    p2 = new Rectangle;
+
+    p2 -> length = 22;
+    p2 -> breadth =21;
 
 }
 
